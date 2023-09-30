@@ -122,8 +122,8 @@ public class Week4Assignment {
 	System.out.println();
 	
 //	13.
-    System.out.println("13 ");
-	System.out.println();
+	
+    System.out.println("13: " + returnLongestStr(names));
 	
 	}
 	
@@ -189,7 +189,19 @@ public class Week4Assignment {
 	}
 	
 //	13. Create a method of your own that solves a problem. In comments, write what the method does and why you created it.
-
-	
-	
+	public static String returnLongestStr(String[] names) {
+//		create a variable to hold the name length and one to hold the name
+		int nameLength = 0;
+		String resultName = "";
+//		loop to get the name lengths of the name
+		for (String name : names) {
+//			check if name length is longest
+			if (name.length() > nameLength) {
+				nameLength = name.length();
+				resultName = name;
+				}	
+			}
+		
+		return(resultName);	
+	}
 }
